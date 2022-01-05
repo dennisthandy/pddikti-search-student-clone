@@ -2,6 +2,7 @@ import { GetServerSideProps, NextPage } from "next";
 import Image from "next/image";
 import { Layout } from "../../components/Layout";
 import { College, Profile, Study } from "../../utils/types";
+import absoluteUrl from 'next-absolute-url'
 
 type Data = {
   datastatuskuliah: College[];
@@ -161,13 +162,12 @@ const Detail: NextPage<Props> = ({ data, error }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+export const getServerSideProps: GetServerSideProps = async ({ query, req }) => {
   let data = {} as Data;
   let error: boolean = false;
+  const { origin } = absoluteUrl(req)
 
-  const response = await fetch(
-    `https://api-frontend.kemdikbud.go.id/detail_mhs/${query.id}`
-  );
+  const response = await fetch(`${origin}/api/detail_mhs/${query.id}`);
 
   if (response.ok) {
     data = await response.json();

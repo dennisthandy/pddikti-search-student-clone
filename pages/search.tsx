@@ -14,9 +14,7 @@ const Search: NextPage = () => {
     dispatch({ type: "SET_UNIVERSITY_LOADING", payload: true });
 
     try {
-      const response = await fetch(
-        "https://api-frontend.kemdikbud.go.id/loadpt"
-      );
+      const response = await fetch("/api/loadpt");
 
       if (response.ok) {
         const data = await response.json();

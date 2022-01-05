@@ -33,9 +33,7 @@ export function Form({ data }: Props): JSX.Element {
 
   async function getStudyProgram(idUniversity: string): Promise<any> {
     try {
-      const response = await fetch(
-        `https://api-frontend.kemdikbud.go.id/loadprodi/${idUniversity}`
-      );
+      const response = await fetch(`/api/loadprodi/${idUniversity}`);
 
       if (response.ok) {
         const data = await response.json();
