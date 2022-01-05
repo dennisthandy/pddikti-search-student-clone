@@ -10,7 +10,7 @@ interface Props {
 
 type Values = {
   nama?: string;
-  nim?: string;
+  nipd?: string;
   pt?: {
     id: string;
     name: string;
@@ -70,7 +70,7 @@ export function Form({ data }: Props): JSX.Element {
     event.preventDefault();
     const payload = {
       nama: values?.nama,
-      nim: values?.nim,
+      nipd: values?.nipd || "",
       pt: values?.pt?.id,
       prodi: values?.prodi?.id,
     };
@@ -78,7 +78,7 @@ export function Form({ data }: Props): JSX.Element {
       type: "SET_STUDENT_QUERY",
       payload: payload as {
         nama: string;
-        nim: string;
+        nipd: string;
         pt: string;
         prodi: string;
       },
@@ -192,15 +192,15 @@ export function Form({ data }: Props): JSX.Element {
                   />
                 </div>
                 <div className="grid gap-1">
-                  <label htmlFor="nim">Nomor Induk Mahasiswa</label>
+                  <label htmlFor="nipd">Nomor Induk Mahasiswa</label>
                   <input
                     onChange={handleChange}
                     type="text"
                     className="p-2 border w-80 focus:outline-none focus:border-purple-600"
-                    name="nim"
-                    id="nim"
+                    name="nipd"
+                    id="nipd"
                     placeholder="14536123"
-                    value={values?.nim}
+                    value={values?.nipd}
                   />
                 </div>
                 <div className="grid gap-1">

@@ -17,7 +17,7 @@ interface StateType {
   };
   studentQuery: {
     nama: string;
-    nim: string;
+    nipd: string;
     pt: string;
     prodi: string;
   };
@@ -33,7 +33,7 @@ type ActionType =
   | { type: "SET_UNIVERSITY_ERROR"; payload: boolean }
   | {
       type: "SET_STUDENT_QUERY";
-      payload: { nama: string; nim: string; pt: string; prodi: string };
+      payload: { nama: string; nipd: string; pt: string; prodi: string };
     }
   | { type: "SET_OPEN_DROPDOWN"; payload: boolean };
 
@@ -48,7 +48,7 @@ const initialState: StateType = {
     loading: false,
     error: false,
   },
-  studentQuery: { nama: "", nim: "", pt: "", prodi: "" },
+  studentQuery: { nama: "", nipd: "", pt: "", prodi: "" },
   openDropdown: false,
 };
 
