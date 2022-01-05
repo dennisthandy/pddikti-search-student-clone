@@ -4,6 +4,7 @@ const withPwa = require("next-pwa");
 
 const nextConfig = {
   trailingSlash: true,
+  exportTrailingSlash: true,
   reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({
