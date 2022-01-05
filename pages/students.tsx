@@ -29,8 +29,8 @@ const Students: NextPage = () => {
         {
           method: "POST",
           headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json;charset=utf-8",
           },
           body: payload,
         }
