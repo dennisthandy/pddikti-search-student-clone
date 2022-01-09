@@ -32,6 +32,10 @@ const nextConfig = {
             key: "Access-Control-Allow-Headers",
             value: "X-CSRF-Token, Content-Type",
           },
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "*",
+          },
           { key: "Connection", value: "keep-alive" },
           { key: "Content-Type", value: "application/json; charset=utf-8" },
         ],
