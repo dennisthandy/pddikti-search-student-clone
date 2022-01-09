@@ -25,12 +25,12 @@ const Students: NextPage = () => {
     dispatch({ type: "SET_STUDENTS_LOADING", payload: true });
     try {
       const response = await fetch(
-        `/api/search_mhs`,
+        `https://api-frontend.kemdikbud.go.id/search_mhs`,
         {
           method: "POST",
           headers: {
             Accept: "application/json, text/plain, */*",
-            "Content-Type": "application/json;charset=utf-8",
+            "Content-Type": "application/json;charset=utf-8p",
           },
           body: payload,
         }
