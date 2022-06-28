@@ -27,6 +27,7 @@ const Students: NextPage = () => {
       const response = await fetch(
         `/api/search_mhs`,
         {
+          redirect: 'manual',
           method: "POST",
           headers: {
             Accept: "application/json, text/plain, */*",
@@ -36,12 +37,19 @@ const Students: NextPage = () => {
           body: payload,
         }
       );
+      
+      console.log(response)
+
+      if(response.redirected) {
+        console.log(response)
+      }
 
       if (response.ok) {
         const data: { mahasiswa: [] } = await response.json();
         dispatch({ type: "SET_STUDENTS_DATA", payload: data.mahasiswa });
         return;
       }
+
     } catch (errror) {
       dispatch({ type: "SET_STUDENTS_ERROR", payload: true });
     }
