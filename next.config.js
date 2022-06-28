@@ -42,14 +42,14 @@ const nextConfig = {
       },
     ];
   },
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: "https://api-frontend.kemdikbud.go.id/:path*",
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/api/:path*",
+  //       destination: "https://api-frontend.kemdikbud.go.id/:path*",
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = withPlugins(
