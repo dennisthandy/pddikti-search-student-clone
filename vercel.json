@@ -1,8 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/api(.*)",
-            "destination": "https://api-frontend.kemdikbud.go.id$1"
+            "source": "/api(.*)/",
+            "destination": "https://api-frontend.kemdikbud.go.id$1/"
         },
         {
             "source": "/(.*)",
