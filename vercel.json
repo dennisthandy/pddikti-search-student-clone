@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/api/search_mhs/",
-            "destination": "https://api-frontend.kemdikbud.go.id/search_mhs"
+            "destination": "https://api-frontend.kemdikbud.go.id/search_mhs/"
         }
     ]
 }
